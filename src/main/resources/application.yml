@@ -1,0 +1,23 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus # Открываем /actuator/prometheus
+  endpoint:
+    prometheus:
+      enabled: true
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: Ov23liOU3sxMfVzHkIrd
+            client-secret: 57e511ee47784b314c31408ed2894c0f29a9ce90
+            scope: read:user, user:email
+
+#    user:
+#      name: "user"
+#      password: "admin12345"
+
